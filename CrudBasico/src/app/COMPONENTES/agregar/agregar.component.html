@@ -1,0 +1,65 @@
+<div class="container">
+  <p>AGREGAR MOVIE </p>
+  <div class="row">
+
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nombre de pelicula</label>
+          <input [(ngModel)]=movie.mov_title type="text" class="form-control" name="nombre">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">año de pelicula</label>
+          <input [(ngModel)]=movie.mov_year type="text" class="form-control" name="año">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">tiempo de pelicula</label>
+          <input [(ngModel)]=movie.mov_time type="text" class="form-control" name="time">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Idioma de pelicula</label>
+          <input [(ngModel)]=movie.mov_lang type="text" class="form-control" name="time">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Idioma de pelicula</label>
+          <input [(ngModel)]=movie.mov_dt_rel type="text" class="form-control" name="time">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Pais de pelicula</label>
+          <input [(ngModel)]=movie.mov_rel_country type="text" class="form-control" name="time">
+        </div>
+
+
+
+        <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+      </form>
+
+    </div>
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">{{movie.mov_title}}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{movie.mov_year}}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{movie.mov_time}}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{movie.mov_lang}}</label>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>

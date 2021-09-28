@@ -1,0 +1,43 @@
+<div class="container">
+  <p>MODIFICAR MOVIE </p>
+  <div class="row">
+
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nombre de pelicula</label>
+          <input [(ngModel)]=movie.mov_title type="text" class="form-control" name="nombre">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">año de pelicula</label>
+          <input [(ngModel)]=movie.mov_year type="text" class="form-control" name="año">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">tiempo de pelicula</label>
+          <input [(ngModel)]=movie.mov_time type="text" class="form-control" name="time">
+        </div>
+        <button (click)="modificar()" class="btn btn-primary">guardar</button>
+      </form>
+
+    </div>
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">{{movie.mov_title}}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{movie.mov_year}}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{movie.mov_time}}</label>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>
