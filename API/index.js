@@ -3,6 +3,8 @@ require('./config/conexion');
 const express = require('express');
 const port = (process.env.PORT || 3000);
 
+
+
 // express
 const app = express();
 
@@ -12,6 +14,8 @@ app.use(express.json())
 
 //configurar
 app.set('port', port)
+/* app.use(express.static('public')) */
+
 
 //rutas
 app.use('/api', require('./rutas'))

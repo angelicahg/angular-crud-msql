@@ -1,18 +1,22 @@
 const mysql = require('mysql');
 const dotenv = require('dotenv');
 dotenv.config();
-const conexion = mysql.createConnection({
+const conexion = mysql.createPool({
 
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  port: process.env.DB_PORT,
-  database: process.env.DB_NAME,
+
+  //mysql.createConnection
+
+  host: 'us-cdbr-east-04.cleardb.com',
+  user: 'b944333c5f5ec0',
+  password: 'a8180168',
+
+  database: 'heroku_6b292d8975153dc',
 
 
 });
 
-conexion.connect((err) => {
+conexion.getConnection((err) => {
+
   if (err) {
     console.log('ha ocurrido un error:' + err)
   }
